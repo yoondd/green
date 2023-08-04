@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="./img/link.jpg">
+    <meta property="og:title" content="I Love Green Earth">
+    <meta property="og:description" content="지구를 사랑하는 마음으로 만들었어요">
+
+    <link rel="icon" type="image/png" href="./img/f.png">
+
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/first_layout.css">
+    <title>Green Earth</title>
+</head>
+<body>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.js"></script>
+
+    <header>
+        <div class="container">
+            <h1>Green Earth</h1>
+            <div class="info">
+                <div>
+                    <i class="fa-solid fa-clock"></i>
+                    09:00AM — 05:00PM
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    +1 323-913-4688
+                </div>
+                <button class="btn4" id="contactBtn">Contact</button>
+            </div>
+            <i class="fa-solid fa-bars mobile-menu-open"></i>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="gnb">
+                    <li class="active">
+                        <a href="#" class="bigmenu">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#" class="bigmenu">About Us</a>
+                        <ul class="submenu">
+                            <li>Greeting</li>
+                            <li>Organization</li>
+                            <li>History</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="bigmenu">Gallery</a>
+                        <ul class="submenu">
+                            <li>photo1</li>
+                            <li>photo2</li>
+                            <li>photo3</li>
+                            <li>photo4</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="bigmenu">News</a>
+                        <ul class="submenu">
+                            <li>news1</li>
+                            <li>news2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="bigmenu">Contact</a>
+                        <ul class="submenu">
+                            <li>Map</li>
+                            <li>contact1</li>
+                            <li>contact2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="bigmenu">Admin</a>
+                        <ul class="submenu">
+                            <li>admin1</li>
+                            <li>board</li>
+                            <li>image</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="snsmenu">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-google"></i></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+        </nav>
+    </header>
+
+    <script>
+        $('.mobile-menu-open').click(function(){
+            $('nav').css('left','0px');
+        });
+        $('.fa-xmark').click(function(){
+            $('nav').css('left','100%');
+        });
+    </script>
+
+
+
+
+
+    <section class="main-slide">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <div class="container">
+                    <h5>our mission</h5>
+                    <h3>Save the Earth</h3>
+                    <button class="btn3">Read More</button>
+                </div>
+            </div>
+            <div class="swiper-slide slide2">
+                <div class="container">
+                    <h5>our vision</h5>
+                    <h3>Beautiful World</h3>
+                    <button class="btn3">Read More</button>
+                </div>
+            </div>
+            <div class="swiper-slide slide3">
+                <div class="container">
+                    <h5>news</h5>
+                    <h3>Promise</h3>
+                    <button class="btn3">Read More</button>
+                </div>
+            </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              direction: "vertical",
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              loop: true
+            });
+        </script>
+    </section>
+
+    <section class="img_and_textbox">
+        <div class="container">
+            <div class="imgbox">
+                <img src="./img/kids.jpg" alt="아이사진">
+            </div>
+            <div class="txtbox">
+                <h2>For our children!</h2>
+
+                <ul class="tabmenu">
+                    <li id="tab1" class="active" onclick="tabview(0)">About Us</li>
+                    <li id="tab2" onclick="tabview(1)">Why Choose Us</li>
+                    <li id="tab3" onclick="tabview(2)">Our Mission</li>
+                </ul>
+
+                <div class="tabcontents">
+                    <div id="tabcontents1">
+                        About Us... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ipsum laboriosam enim optio est esse eum tempora assumenda.or sit amet, consectetur adipisicing elit. Temporibus ipsum laboriosam enim optio est esse eum tempora assumenda.
+                    </div>
+                    <div id="tabcontents2">
+                        Why... Lorem ipsum, dolor sit amet consectetur adipisicing elitor sit amet, consectetur adipisicing elit. or sit amet, consectetur adipisicing elit. 
+                    </div>
+                    <div id="tabcontents3">
+                        Mission happy... or sit amet, consectetur adipisicing elit.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. or sit amet, consectetur adipisicing elit. Excepturi ea quae
+                    </div>
+                </div>
+
+                <script>
+
+                    function tabview(num){
+                        // $('.tabmenu>li').removeClass('active');
+                        // $('.tabmenu>li').eq(num).addClass('active');
+
+                        // $('.tabcontents>div').hide();
+                        // $('.tabcontents>div').eq(num).show();
+                    }
+
+                    $('.tabmenu>li').click(function(){
+                        $('.tabmenu>li').removeClass('active');
+                        $(this).addClass('active');
+
+                        var myidx = $(this).index();
+                        $('.tabcontents>div').hide();
+                        $('.tabcontents>div').eq(myidx).show();
+                    });
+
+
+
+                    // $('#tab1').click(function(){
+                    //     $('.tabmenu li').removeClass('active');
+                    //     $('#tab1').addClass('active');
+
+                    //     $('.tabcontents>div').hide();
+                    //     $('#tabcontents1').show();
+                    // });
+                    // $('#tab2').click(function(){
+                    //     $('.tabmenu li').removeClass('active');
+                    //     $('#tab2').addClass('active');
+
+                    //     $('.tabcontents>div').hide();
+                    //     $('#tabcontents2').show();
+                    // });
+                    // $('#tab3').click(function(){
+                    //     $('.tabmenu li').removeClass('active');
+                    //     $('#tab3').addClass('active');
+
+                    //     $('.tabcontents>div').hide();
+                    //     $('#tabcontents3').show();
+                    // });
+                </script>
+
+                <button class="btn1">Get in Touch</button>
+                <button class="btn2">Read more</button>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="full-bg" >
+        <h2 data-aos="fade-up" data-aos-duration="3000">
+            Please remember!<br>
+            We must love the Earth!
+        </h2>
+        <p data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1000">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>Officia illo laboriosam laborum!<br>Possimus laudantium qui, ratione amet ea nostrum. Cupiditate itaque<br>dolorum expedita consequuntur mollitia sint odio doloribus adipisci incidunt!</p>
+
+        <button class="btn1">Read More</button>
+    </section>
+
+    <section class="service">
+        <div class="container">
+            <h2>Our service</h2>
+            <ul class="service-list">
+                <li data-aos="fade-up">
+                    <i class="fa-solid fa-seedling"></i>
+                    <div class="service-txt">
+                        <h6>Seed</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    </div>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-solid fa-tree"></i>
+                    <div class="service-txt">
+                        <h6>Tree</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam assumenda praesentium quod</p>
+                    </div>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="1000">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <div class="service-txt">
+                        <h6>Earth</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam assumenda praesentium quod</p>
+                    </div>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="1500">
+                    <i class="fa-solid fa-recycle"></i>
+                    <div class="service-txt">
+                        <h6>Recycle</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam assumenda praesentium quod</p>
+                    </div>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="2000">
+                    <i class="fa-solid fa-sun-plant-wilt"></i>
+                    <div class="service-txt">
+                        <h6>Plant</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam assumenda praesentium quod</p>
+                    </div>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="2500">
+                    <i class="fa-solid fa-sun"></i>
+                    <div class="service-txt">
+                        <h6>Sun</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam assumenda praesentium quod</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer_top">
+            <div class="container">
+                <div>
+                    <h6>CONTACT US</h6>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:01012341234">010-1234-1234</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:yoondd@kakao.com">yoondd@kakao.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-fax"></i>
+                            <a href="#">070-1234-1234</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <a href="#">경기도 수원시 팔달구</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h6>POPULAR NEWS</h6>
+                    <dl class="newslist">
+                        <dt>Your Personal Guide to 5 Best<br>
+                            Places to Visit on Earth</dt>
+                        <dd>May 04, 2023</dd>
+                    </dl>
+                    <dl class="newslist">
+                        <dt>Lorem ipsum dolor sit amet<br> consectetur adipisicing elit. <br>Doloribus</dt>
+                        <dd>May 05, 2023</dd>
+                    </dl>
+                </div>
+                <div>
+                    <h6>QUICK LINKS</h6>
+                    <ul class="quicklist">
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu1</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu2</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu3</a>
+                        </li>
+                        <li>
+                            <a href="#">Location</a>
+                        </li>
+                        <li>
+                            <a href="#">Admin</a>
+                        </li>
+                        <li>
+                            <a href="#">Link</a>
+                        </li>
+                    </ul>
+                    <button class="btn1 bottombtn">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+
+                <p>© 2023 Green Earth.</p>
+
+                <ul class="snsmenu">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-google"></i></li>
+                </ul>
+
+                <p>Privacy Policy</p>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- aos를 위한 js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <div class="modal-bg"></div>
+    <div class="contact-form">
+        <i class="fa-regular fa-circle-xmark"></i>
+
+        <div class="form-title">
+            <div class="thumnail"></div>
+            <div class="profile">
+                <h4>Contact Walter White</h4>
+                <p>Leasing Agent, (415) 688 9901 -ext 3122</p>
+            </div>
+        </div>
+        <form action="">
+            <div class="form-contents">
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+                <input type="email" placeholder="Your email address">
+                <textarea placeholder="typing..."></textarea>
+            </div>
+            <div class="form-button">
+                <div>
+                    <input type="checkbox" id="card">
+                    <label for="card">Attach Renter Card <i class="fa-solid fa-credit-card"></i></label>
+                </div>
+                <input type="submit" class="btn1" value="Send Message"></input>
+            </div>
+        </form>
+
+    </div>
+
+
+    <script>
+        $('.modal-bg').hide();
+        $('.contact-form').hide();
+
+        contactBtn.onclick = function(){
+            $('.modal-bg').show();
+            $('.contact-form').show();
+        }
+
+        $('.contact-form .fa-circle-xmark').click(function(){
+            $('.modal-bg').hide();
+            $('.contact-form').hide();
+        });
+    </script>
+
+
+
+
+
+
+
+
+<!-- 
+    <section class="tab">
+        <div class="tabmenu">
+            <div id="tab1">
+                <a href="#">tab1</a>
+            </div>
+            <div id="tab2">
+                <a href="#">tab2</a>
+            </div>
+        </div>
+        
+        <div class="tabcontents">
+            <div id="c1">
+                <ul>
+                    <li><a href="#">공지사항 첫번째</a></li>
+                    <li><a href="#">공지사항 두번째</a></li>
+                    <li><a href="#">세번쨰 공지사항</a></li>
+                </ul>
+            </div>
+            <div id="c2">contents2</div>
+        </div>
+    </section>
+    
+
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        $('#tab1').click(function(){
+            $('#c1').show();
+            $('#c2').hide();
+        });
+        $('#tab2').click(function(){
+            $('#c2').show();
+            $('#c1').hide();
+        });
+    </script> -->
+
+
+   
+</body>
+</html>
